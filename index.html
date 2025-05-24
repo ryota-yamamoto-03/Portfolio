@@ -1,177 +1,343 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-   <!-- 基本情報 -->
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-   <title>YamamotoRyota/Portfolio</title>
-   <link rel="icon" href="./asset/img/ryota_logo_alpha.png">
-   <!-- SEO対策 -->
-   <meta name="keyword" content="山本涼太,YamamotoRyota,ポートフォリオ,クリエィティブ">
-   <meta name="description" content="山本涼太のポートフォリオサイトです。HTML,CSS,JSを用いて制作しました。
-   趣味でUnityを使ってゲーム制作やバーチャルライブ制作、映像編集などを制作しています。">
-   <link rel="canonical" href="https://ph19-ryota.github.io/portfolio/">   
-   <!--style.cssの読み込み-->
-   <link rel="stylesheet" href="./asset/css/style.css">
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-   <!--jQuery.jsの読み込み-->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-   <!-- ローディング画面 -->
-   <link href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css" rel="stylesheet">
-   <link href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/4-1-3/css/4-1-3.css" rel="stylesheet">
-   <link rel="stylesheet" type="text/css" href="./asset/css/loading.css">
-
-   <!-- ハンバーガーメニューCSS -->
-   <link rel="stylesheet" href="./asset/css/hamburger.css">
-   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-   <script src="./asset/js/jquery.event.move.js"></script>
-
-   <!--スムーズスクロール実装-->
-   <script src="./asset/js/smooth-scroll.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>山本涼太｜妄想型統合失調症</title>
+  <!-- SNSやエンジン向けのSEO -->
+  <!-- メタディスクリプション（検索結果の説明文に表示） -->
+  <meta name="description" content="障害当事者だからこそ輝けるキャリア、メンタルヘルスラボ専用のポートフォリオサイト">
+  <!-- キーワード（あまり重要視されませんが参考） -->
+  <meta name="keywords" content="山本涼太, 妄想型統合失調症, 転職, 障害当事者, 自己PR, ポートフォリオ">
+  <meta property="og:title" content="山本涼太|妄想型統合失調症">
+  <meta property="og:description" content="障害当事者だからこそ輝けるキャリア、メンタルヘルスラボ用のポートフォリオサイト">
+  <meta property="og:image" content="https://ryota-yamamoto-03.github.io/about-me/assets/img/paranoid_schizophrenia_logo.PNG">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ryota-yamamoto-03.github.io/about-me/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-wHfL+D+V6+K8hTuQsYqxyY6qjCMaD2KYeBklV3Zk6uh3WlMuHTzFq2FvH5G4V2pDGi0pt+PyTuMwEqZ9fN1Qxg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="icon" href="./assets/img/paranoid_schizophrenia_logo.PNG">
 </head>
 <body>
-   <!-- Loading -->
+  <header>
+    <h1>ITスキル×自身の障害経験で、<br>誰かの“はじめの一歩”を支えたい</h1>
+  </header>
 
-   <header>
-      <h1 class="headline">
-         <a>YAMAMOTO RYOTA</a>
-      </h1>
-      <!-- ハンバーガーメニュー -->
-      <div class="openbtn"><span></span><span></span><span></span></div>
-      <nav id="g-nav">
-         <div id="g-nav-list">
-            <ul>
-               <li><a href="#">TOP</a></li>
-               <li><a href="#About">ABOUT</a></li>
-               <li><a href="#Skills">SKILLS</a></li>
-               <li><a href="#Works">WORKS</a></li>
-               <li><a href="#Contact">CONTACT</a></li>
-            </ul>
-         </div>
-      </nav>
-      <div class="circle-bg"></div>
-   </header>
-   <main>
-      <div class="top_view" id="#">
-         <div class="top_container">
-            <video autoplay muted loop>
-               <source src="./asset/video/Portfolio_Movie.mp4">
-            </video>
-         </div>
-         <div class="top_ttl"></div>
+  <main>
+    <div id="mobile-alert" class="mobile-alert">
+      PCで見ることを推奨しています。
+    </div>
+    <section id="about">
+        <h2>About Me</h2>
+        <h3>私について</h3>
+        <p>
+          プログラミングを学べる高校で、ゲームやWeb制作に取り組んできました。<br>
+          新卒でIT企業に就職しましたが、起業を志していた矢先、精神疾患を患いました。<br>
+          これまでに2度、精神科に入院した経験があり、現在は復職に向けて準備を進めています。<br>
+
+          そんな私が次に目指すのは、<b>「障害を抱える方々の就労支援」</b>です。<br>
+          自身の経験を通して、表面的な支援ではなく、本当に必要なサポートは何かを、<br>
+          同じ目線で考えられることが私の強みです。<br>
+
+          動画では、これまでの歩みと、<b>「なぜ就労移行支援に関わりたいのか」</b>をお話ししています。<br>
+          よろしければ、ぜひご覧ください。
+        </p>
+        <button id="openVideoBtn" class="btn-round-green">
+            <i class="fas fa-info-circle"></i> 動画を見る
+        </button>
+        <button class="btn-round-white" onclick="postToX()" id="xButton">
+          <span class="default-text" id="hoverButton textSpan">#障害という線引きを無くしたい</span>
+        </button>
+        <!-- モーダルのHTML -->
+        <div id="videoModal" class="modal hidden">
+          <div class="modal-content">
+              <span id="closeModal" class="close">&times;</span>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/MLe4HbPqWtg?si=YkWdAYH6sDe11PYz&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+    </section>
+
+    <section id="features" class="section">
+      <h2>Feature</h2>
+      <h3>特徴</h3>
+      <div class="hashtags">
+        <span class="hashtag" data-tag="行動力">#行動力</span>
+        <span class="hashtag" data-tag="ゲーム制作">#ゲーム制作</span>
+        <span class="hashtag" data-tag="共感力">#共感力</span>
+        <span class="hashtag" data-tag="挑戦する人">#挑戦する人</span>
+        <span class="hashtag" data-tag="Web制作">#Web制作</span>
+        <span class="hashtag" data-tag="創造力">#創造力</span>
+        <span class="hashtag" data-tag="元DeNA出身">#元DeNA出身</span>
+        <span class="hashtag" data-tag="高卒">#高卒</span>
+        <span class="hashtag" data-tag="INFP">#INFP</span>
+        <span class="hashtag" data-tag="仲介者">#仲介者</span>
+        <span class="hashtag" data-tag="常識を破る">#常識を覆す</span>
+        <span class="hashtag" data-tag="妄想型統合失調症">#妄想型統合失調症</span>
+        <span class="hashtag" data-tag="好奇心強め">#好奇心強め</span>
+        <span class="hashtag" data-tag="ノーコード開発">#ノーコード開発</span>
+        <span class="hashtag" data-tag="自分に素直">#自分に素直</span>
       </div>
-      <!-- ABOUT -->
-      <section class="about" id="About">
-         <div class="container">
-            <h1>ABOUT</h1><hr><br>
-         </div>
-         <div class="body_home">
-            <div class="text_home">
-               <p class="about_ttl">挑戦が創り出す</p>
-               <p class="about_description">
-                  山本涼太は好奇心と行動力を武器に、<br>
-                  クリエイティブなモノづくりに挑戦しています。
-               </p>
-               <div class="btn">
-                  <a class="btn-box" href="#Works">詳しくはこちらから</a>
-               </div>
-            </div>
-         </div>
-      </section>
+    </section>
 
-      <!-- SKILLS -->
-      <section class="skills" id="Skills">
-         <div class="container">
-            <div class="skills_heading">
-               <h1>SKILLS</h1><hr>
-               <p class="skills_ttl">様々な分野で活動</p>
-            <ul class="list_skills">
-               <li>
-                  <a href="https://ryota-yamamoto-03.github.io/Portfolio/my%20work/work.html#game"><img src="./asset/img/game_256px.png" alt="ゲームアイコン">
-                     <p>GAME</p>
-                  </a>
-               </li>
-               <li>
-                  <a href="https://ryota-yamamoto-03.github.io/Portfolio/my%20work/work.html#web"><img src="./asset/img/web_256px.png" alt="Webアイコン">
-                     <p>WEB</p>
-                  </a>
-               </li>
-               <li>
-                  <a href="https://ryota-yamamoto-03.github.io/Portfolio/my%20work/work.html#video"><img src="./asset/img/movie_256px.png" alt="動画アイコン">
-                     <p>VIDEO</p>
-                  </a>
-               </li>
-               <li>
-                  <a href="https://ryota-yamamoto-03.github.io/Portfolio/my%20work/work.html#vr"><img src="./asset/img/dj_256px.png" alt="ライブアイコン">
-                     <p>LIVE</p>
-                  </a>
-               </li>
-            </ul>
-      </section>
-
-      <!-- WORKS -->
-      <section class="works" id="Works">
-         <div class="container">
-            <div class="works_heading1">
-               <h1>WORKS</h1><hr><br>
-               <p class="works_ttl">好奇心から作る<br>コンテンツ</p>
-            </div>
-         </div>
-         <div class="body_home">
-            <div class="text_home">
-               <!-- <div class="layout_2_div">
-                  <img src="./asset/img/workimage.png" alt="山本涼太の作品集画像">
-               </div> -->
-               <div class="btn">
-                  <a href="./my work/work.html" class="btn-box">作品を見る</a>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- CONtACT FORM -->
-      <section class="contact" id="Contact">
-         <h1 class="contact-form-h2">CONTACT</h1>
-            <div class="contact-form-container">
-               <form class="contact-form" action="https://formspree.io/f/meojqrvw" method="POST">
-                  <div class="form-group">
-                     <label for="name">名前</label>
-                     <input type="text" id="name" name="name" required>
-                  </div>
-                  <div class="form-group">
-                     <label for="email">メールアドレス</label>
-                     <input type="email" name="email" id="email" required>
-                  </div>
-                  <div class="form-group">
-                     <label for="subject">件名</label>
-                     <input type="text" id="subject" name="subject" required>
-                  </div>
-                  <div class="form-group">
-                     <label for="message">メッセージ</label>
-                     <textarea name="message" id="message" cols="30" rows="5" required></textarea>
-                  </div>
-                  <button type="submit" id="contactForm">送信</button>
-               </form>
-            </div>
-      </section>
-   </main>
-   <footer>
-      <div class="container">
-         <p class="copyright">
-            &copy; 2021-2024 Created by Yamamoto Ryota.
-         </p>
+    <section id="works">
+      <h2>Works</h2>
+      <h3>作品</h3>
+      <div class="works-container">
+        <div class="work-card-1" data-modal="modal1">
+          <h4>Reflexe Sniper</h4>
+          <p>
+            私はOculus Quest 2を用いて、<br>
+            VR対応のFPS型リズムゲームを制作いたしました。<br>
+            本作品は高校3年生の卒業展示会に向けて制作したもので、<br>
+            NEFFEXの楽曲を基に、<br>
+            UnityのTimeline機能を活用して<br>
+            ノーツやライトの演出を管理しております。<br>
+            企画から開発までの全工程を一人で担当し、<br>
+            約1ヶ月弱の期間で完成に至りました。
+          </p>
+          <span class="work-label">#VRゲーム開発</span>
+        </div>
+        <div class="work-card-2" data-modal="modal2">
+          <h4>天才小学生vs怪力校長</h4>
+          <p>
+            Photonを用いたオンライン機能を活用し、<br>
+            VRとPCをオンライン環境で接続して<br>
+            対戦するアクションゲームを制作しました。<br>
+            本作品は2名で制作し、開発期間は3ヶ月でした。<br>
+            私は企画およびプログラミングを担当いたしました。
+          </p>
+          <span class="work-label">#VRゲーム開発</span>
+        </div>
+        <div class="work-card-1" data-modal="modal3">
+          <h4>NCS</h4>
+          <p>
+            本ゲームはNCSの楽曲を使用した<br>
+            2Dリズムゲームであり、<br>
+            UnityのTimelineのAnimation機能を<br>
+            活用してノーツの管理を行いました。<br>
+            開発期間は約2ヶ月で、開発は一人で担当いたしました。
+          </p>
+          <span class="work-label">#2Dゲーム開発</span>
+        </div>
+        <div class="work-card-2" data-modal="modal4">
+          <h4>STOPLINE</h4>
+          <p>
+            本ゲームは学内審査会において<br>
+            最優秀賞を受賞した作品です。<br>
+            全50ステージで構成されており、<br>
+            操作は線を引くだけの簡単なものとなっております。<br>
+            そのため、多くの方に気軽に楽しんでいただけるゲームとなっております。
+          </p>
+          <span class="work-label">#2Dゲーム開発</span>
+        </div>
+        <div class="work-card-1" data-modal="modal5">
+          <h4>BusinessCard</h4>
+          <p>
+            オンライン名刺を作成しました
+          </p>
+          <span class="work-label">#Web制作</span>
+        </div>
+        <div class="work-card-2" data-modal="modal6">
+          <h4>MetaMuse</h4>
+          <p>バーチャルアイドル公式サイトを作成しました</p>
+          <span class="work-label">#Web制作</span>
+        </div>
+        <div class="work-card-1" data-modal="modal7">
+          <h4>第六感</h4>
+          <p>クリックで詳細</p>
+          <span class="work-label">#AfterEffects</span>
+        </div>
+        <div class="work-card-2" data-modal="modal8">
+          <h4>レペゼン地球非公式バーチャルライブ</h4>
+          <p>
+            視聴回数は7万回、高評価1000件以上
+          </p>
+          <span class="work-label">#バーチャルライブ</span>
+        </div>
       </div>
-   </footer>
-   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-   <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
-   <script src="./asset/js/loading.js"></script>
-   <script src="./asset/js/contact.js"></script>
-   <script src="./asset/js/skill.js"></script>
-   <!-- ハンバーガーメニューjs -->
-   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-   <script src="./asset/js/hamburger.js"></script>
+
+      <!-- モーダル1 -->
+      <div class="work-modal" id="modal1">
+        <div class="work-modal-content">
+          <span class="close-modal">&times;</span>
+          <h3>【VR】Reflexe Sniper</h3>
+          <iframe width="530" height="315" src="https://www.youtube.com/embed/wIoU7AfTHqg?si=u7-CM-2SW22rKLwb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- モーダル2 -->
+      <div class="work-modal" id="modal2">
+        <div class="work-modal-content">
+          <span class="close-modal">&times;</span>
+          <h3>【VRvsPC】天才小学生vs怪力校長</h3>
+          <iframe width="530" height="315" src="https://www.youtube.com/embed/Gio60bpG4fo?si=jxJLZe2afmAgursw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- モーダル3 -->
+      <div class="work-modal" id="modal3">
+        <div class="work-modal-content">
+          <span class="close-modal">&times;</span>
+          <h3>【音ゲー】NCS</h3>
+         <iframe width="530" height="315" src="https://www.youtube.com/embed/BfYBUHoQHBE?si=yXThEYmSVTO7gLL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- モーダル4 -->
+      <div class="work-modal" id="modal4">
+        <div class="work-modal-content">
+          <span class="close-modal">&times;</span>
+          <h3>【2D】STOPLINE</h3>
+          <iframe width="530" height="315" src="https://www.youtube.com/embed/zhaeknxWIWM?si=9YArH_BtFxULpSZs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <p><a href="https://ph19-ryota.github.io/STOPLINE.VGA/" target="_blank">こちら</a>からゲームをプレイすることができます</p>
+        </div>
+      </div>
+
+      <!-- モーダル5 -->
+      <div class="work-modal" id="modal5">
+        <div class="work-modal-content">
+          <span class="close-modal">&times;</span>
+          <h3>【Web】オンライン名刺</h3>
+          <iframe width="530" height="315" src="https://ryota-yamamoto-03.github.io/BusinessCard/" frameborder="0"></iframe>
+        </div>
+      </div>
+
+      <!-- モーダル6 -->
+      <div class="work-modal" id="modal6">
+        <div class="work-modal-content">
+          <span class="close-modal">&times;</span>
+          <h3>【Web】MetaMuse / バーチャルアイドル</h3>
+          <iframe width="530" height="315" src="https://metamuse-virtualidol.github.io/Official/" frameborder="0"></iframe>
+        </div>
+      </div>
+
+      <!-- モーダル7 -->
+      <div class="work-modal" id="modal7">
+        <div class="work-modal-content">
+          <span class="close-modal">&times;</span>
+          <h3>第六感</h3>
+          <iframe width="530" height="315" src="https://www.youtube.com/embed/fS2qOu8WHTw?si=zKwUYwBqfbvUDHH9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- モーダル8 -->
+      <div class="work-modal" id="modal8">
+        <div class="work-modal-content">
+          <span class="close-modal">&times;</span>
+          <h3>レペゼン地球非公式バーチャルライブ</h3>
+          <iframe width="530" height="315" src="https://www.youtube.com/embed/1ZW_CqXTrdo?si=eWDNots92B1Z5N1X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+      
+    </section>
+
+    <section id="numbers" class="numbers-section">
+      <h2>In numbers</h2>
+      <h3 class="section-title">数字で見る山本涼太</h3>
+      <div class="numbers-container">
+        <div class="number-card">
+          <div class="label">年齢</div>
+          <div class="number">22歳</div>
+        </div>
+        <div class="number-card">
+          <div class="number">10:0</div>
+          <div class="label">男女比</div>
+        </div>
+        <div class="number-card">
+          <div class="number">4年</div>
+          <div class="label">Unity歴</div>
+        </div>
+        <div class="number-card">
+          <div class="number">4回</div>
+          <div class="label">最優秀賞受賞回数</div>
+        </div>
+        <div class="number-card">
+          <div class="number">2回</div>
+          <div class="label">精神科入院回数</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <h2>FAQ</h2>
+        <h3>よくある質問</h3>
+        <div class="accordion-item">
+            <button class="accordion-header">Q1. この会社はどこで知りましたか？</button>
+            <div class="accordion-content">
+            <p>新卒時代に貴社代表の古徳社長とお会いする機会があり、その際に頂いたパンフレットを通じて貴社のことを知りました。</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">Q2. 現在の治療状況を教えてください</button>
+            <div class="accordion-content">
+            <p>現在は月に1回の通院と注射、さらに朝・昼・夜の服薬を継続しており、安定した状態で障害と向き合っております。</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">Q3. なぜこの会社を志望しましたか？</button>
+            <div class="accordion-content">
+            <p>
+              私自身が精神疾患を抱えている当事者であることから、貴社の取り組みに深く共感しております。<br>
+              自身の経験を活かし、障害をお持ちの方々の立場や課題をより近い目線で理解し、支援できると考え志望いたしました。
+            </p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">Q4. 今までに制作した作品を見せてください</button>
+            <div class="accordion-content">
+            <p>
+              「<a href="#works">Works</a>」セクションにて、これまでに制作した作品を動画形式で掲載しております。<br>
+              各作品をクリックいただくことで、詳細をご覧いただけます。
+            </p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">Q5. お問い合わせはどこからできますか？</button>
+            <div class="accordion-content">
+            <p>
+              ページ下部の「<a href="#contact">Contact</a>」フォームより、お気軽にご連絡ください。
+            </p>
+            </div>
+        </div>
+        <!-- 追加Q&Aも同じ構造でOK -->
+    </section>
+
+
+    <section id="contact" class="contact-section">
+      <h2>Contact</h2>
+      <h3>お問い合わせ</h3>
+      <div class="contact-form-container">
+        <form action="https://formspree.io/f/mldbvozz" method="POST">
+          <label for="name">お名前</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="company">会社名(任意)</label>
+          <input type="text" id="company" name="company" required>
+
+          <label for="email">メールアドレス</label>
+          <input type="email" id="email" name="_replyto" required />
+
+          <label for="subject">件名</label>
+          <select name="subject" id="subject" required>
+              <option value="スカウト">スカウト</option>
+              <option value="質問">質問</option>
+              <option value="相談">相談</option>
+              <option value="その他">その他</option>
+          </select>
+
+          <label for="message">メッセージ</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">送信</button>
+      </form>
+      </div>
+      
+    </section>
+  </main>
+  <footer>
+    <small>&copy;2025 Yamamoto Ryota. Supported by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></small>
+  </footer>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
