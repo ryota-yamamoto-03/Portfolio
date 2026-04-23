@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>山本涼太 — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">PORTFOLIO</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#works" class="mobile-link">Works</a></li>
+      <li><a href="resume.html" class="mobile-link">Resume</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb--1"></div>
+      <div class="hero-orb hero-orb--2"></div>
+      <div class="hero-orb hero-orb--3"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal-up">Game &nbsp;·&nbsp; Web &nbsp;·&nbsp; Creator</p>
+      <h1 class="hero-title">
+        <span class="hero-line reveal-up" style="--delay:0.1s">What they called</span>
+        <span class="hero-line reveal-up gradient-text" style="--delay:0.2s">madness,</span>
+        <span class="hero-line reveal-up" style="--delay:0.3s">I call vision.</span>
+      </h1>
+      <p class="hero-sub reveal-up" style="--delay:0.45s">
+        妄想型統合失調症と生きた4年間の記録。<br>
+        内側の声が、創造の燃料になった。
+      </p>
+      <div class="hero-cta reveal-up" style="--delay:0.6s">
+        <a href="#works" class="btn btn--primary">作品を見る</a>
+        <a href="#about" class="btn btn--ghost">経歴を読む</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- Marquee Strip -->
+  <div class="marquee-wrap">
+    <div class="marquee-track" aria-hidden="false">
+      <span>GameCreator</span><span class="marquee-dot">·</span>
+      <span>WebCreator</span><span class="marquee-dot">·</span>
+      <span>VRゲーム開発</span><span class="marquee-dot">·</span>
+      <span>Webアプリ開発</span><span class="marquee-dot">·</span>
+      <span>ノーコード開発</span><span class="marquee-dot">·</span>
+      <span>営業300人超え</span><span class="marquee-dot">·</span>
+      <span>0→1</span><span class="marquee-dot">·</span>
+      <span>新規事業</span><span class="marquee-dot">·</span>
+      <span>好奇心旺盛</span><span class="marquee-dot">·</span>
+      <span>圧倒的行動力</span><span class="marquee-dot">·</span>
+      <!-- duplicate for seamless loop -->
+      <span aria-hidden="true">GameCreator</span><span class="marquee-dot" aria-hidden="true">·</span>
+      <span aria-hidden="true">WebCreator</span><span class="marquee-dot" aria-hidden="true">·</span>
+      <span aria-hidden="true">VRゲーム開発</span><span class="marquee-dot" aria-hidden="true">·</span>
+      <span aria-hidden="true">Webアプリ開発</span><span class="marquee-dot" aria-hidden="true">·</span>
+      <span aria-hidden="true">ノーコード開発</span><span class="marquee-dot" aria-hidden="true">·</span>
+      <span aria-hidden="true">営業300人超え</span><span class="marquee-dot" aria-hidden="true">·</span>
+      <span aria-hidden="true">0→1</span><span class="marquee-dot" aria-hidden="true">·</span>
+      <span aria-hidden="true">新規事業</span><span class="marquee-dot" aria-hidden="true">·</span>
+      <span aria-hidden="true">好奇心旺盛</span><span class="marquee-dot" aria-hidden="true">·</span>
+      <span aria-hidden="true">圧倒的行動力</span><span class="marquee-dot" aria-hidden="true">·</span>
+    </div>
+  </div>
+
+  <!-- About / Chronicle Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="section-label reveal-up">The Chronicle</p>
+          <h2 class="section-title reveal-up">壊れながら、<br><span class="gradient-text">創り続けた。</span></h2>
+          <p class="about-body reveal-up">
+            私は20代前半で妄想型統合失調症を発症し、2023年に入院・治療を2度経験しました。
+            当初は体調の波がありましたが、現在は医療機関との連携（定期通院・服薬管理・筋肉注射）やクローズでのアルバイトを通じて、安定したコンディションを維持しています。
+          </p>
+          <p class="about-body reveal-up" style="--delay:0.1s">
+            また、自身の状態を客観的に把握し、無理のない範囲で継続的に取り組むセルフマネジメント力を身につけてきました。
+            実際に、サービス企画や開発（WowMe）においては、コンセプト設計からMVP開発、営業、改善までを一貫して推進しています。
+          </p>
+          <p class="about-body reveal-up" style="--delay:0.2s">
+            これらの経験を通じて、困難な状況でも試行錯誤を重ねながら前進する力と、継続して価値を生み出す力を培ってきました。
+            今後は自身の経験も活かしながら、ユーザーに価値を届けるプロダクト開発に貢献していきたいと考えています。
+          </p>
+          <div class="about-stats reveal-up" style="--delay:0.3s">
+            <div class="stat">
+              <span class="stat-num" data-count="4">0</span>
+              <span class="stat-label">Years Living With It</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="2">0</span>
+              <span class="stat-label">Hospitalizations</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="14">0</span>
+              <span class="stat-label">Works Created</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual reveal-right">
+          <div class="about-card">
+            <div class="about-card-inner">
+              <div class="about-avatar">
+                <div class="avatar-ring"></div>
+                <div class="avatar-core">
+                  <img src="images/avatar.jpg" alt="Yamamoto Ryota" class="avatar-img">
+                </div>
+              </div>
+              <div class="about-badges">
+                <span class="badge badge--green">Now in Recovery</span>
+                <span class="badge badge--dark">Diagnosed 2023</span>
+                <span class="badge badge--dark">Paranoid Type · F20.0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="timeline-section">
+    <div class="container">
+      <p class="section-label reveal-up center">Timeline</p>
+      <h2 class="section-title reveal-up center">
+        4年間の<span class="gradient-text">軌跡。</span>
+      </h2>
+      <div class="timeline">
+        <div class="tl-item reveal-up" style="--delay:0s">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <span class="tl-year">2023/1</span>
+            <h3>発症</h3>
+            <p>
+              <li>妄想（現実と異なる確信）</li>
+              <li>躁状態（気分の高揚・活動過多）</li>
+              <li>異常行動・発言</li>
+            </p>
+          </div>
+        </div>
+        <div class="tl-item reveal-up" style="--delay:0.08s">
+          <div class="tl-dot tl-dot--bright"></div>
+          <div class="tl-content">
+            <span class="tl-year">2023/2</span>
+            <h3>初回入院（医療保護入院）</h3>
+            <p>
+              <li>足立区にある成仁病院に入院</li>
+              <li>薬物療法＋m-ECT（修正型電気けいれん療法）を実施</li>
+            </p>
+          </div>
+        </div>
+        <div class="tl-item reveal-up" style="--delay:0.16s">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <span class="tl-year">2023/3</span>
+            <h3>退院後</h3>
+            <p>
+              <li>体調の波がある状態が続く</li>
+              <li>アルバイトや就労移行支援に挑戦</li>
+              <li>一方で体調・人間関係の負荷により継続が難しい場面も経験</li>
+            </p>
+          </div>
+        </div>
+        <div class="tl-item reveal-up" style="--delay:0.24s">
+          <div class="tl-dot tl-dot--bright"></div>
+          <div class="tl-content">
+            <span class="tl-year">2023/12</span>
+            <h3>再発・再入院</h3>
+            <p>
+              <li>12月13日：緊急措置入院（豊島病院）</li>
+              <li>12月14日：措置入院（成仁病院）</li>
+              <li>症状：被害妄想、誇大妄想・感情の起伏の激化</li>
+            </p>
+          </div>
+        </div>
+        <div class="tl-item reveal-up" style="--delay:0.32s">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <span class="tl-year">2024/2</span>
+            <h3>退院</h3>
+            <p>
+              <li>2か月半の入院を経て症状の安定を確認し退院</li>
+            </p>
+          </div>
+        </div>
+        <div class="tl-item reveal-up" style="--delay:0.40s">
+          <div class="tl-dot tl-dot--green"></div>
+          <div class="tl-content">
+            <span class="tl-year">2024/2～現在</span>
+            <h3>寛解・安定期</h3>
+            <p>
+              <li>月1回の外来通院＋注射・薬物療法・訪問看護の利用</li>
+              <li>デイケア（週5回通所）後、現在は週3でクローズのアルバイトをしている</li>
+              <li>症状悪化時は休養＋頓服で自己管理</li>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Faculties / Skills Section -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <p class="section-label reveal-up center">Faculties</p>
+      <h2 class="section-title reveal-up center">
+        病が研ぎ澄ました、<br><span class="gradient-text">スキル</span>
+      </h2>
+      <div class="skills-grid">
+        <div class="skill-card reveal-up" style="--delay:0s">
+          <div class="skill-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="url(#g1)" stroke-width="2"/><path d="M13 27l7-14 7 14" stroke="url(#g1)" stroke-width="2" stroke-linecap="round"/><defs><linearGradient id="g1" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#34d399"/><stop offset="1" stop-color="#059669"/></linearGradient></defs></svg>
+          </div>
+          <h3>プロダクト企画・サービス設計</h3>
+          <p>ユーザー体験から逆算してサービスを考えられる / WowMeのコンセプト設計・価値設計を自走で実施</p>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:85%"></div></div>
+        </div>
+        <div class="skill-card reveal-up" style="--delay:0.08s">
+          <div class="skill-icon">
+            <svg viewBox="0 0 40 40" fill="none"><rect x="4" y="4" width="32" height="32" rx="8" stroke="url(#g2)" stroke-width="2"/><path d="M13 20h14M20 13v14" stroke="url(#g2)" stroke-width="2" stroke-linecap="round"/><defs><linearGradient id="g2" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#60a5fa"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs></svg>
+          </div>
+          <h3>Unity / C# 開発スキル</h3>
+          <p>ゲーム制作経験あり（高校＋実務） / IRIAMでのUnityエンジニア経験</p>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:70%"></div></div>
+        </div>
+        <div class="skill-card reveal-up" style="--delay:0.16s">
+          <div class="skill-icon">
+            <svg viewBox="0 0 40 40" fill="none"><polygon points="20,4 36,32 4,32" stroke="url(#g3)" stroke-width="2" stroke-linejoin="round"/><defs><linearGradient id="g3" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#f472b6"/><stop offset="1" stop-color="#db2777"/></linearGradient></defs></svg>
+          </div>
+          <h3>MVP開発・プロトタイピング</h3>
+          <p>AdaloやAIなどで実際に形にできる / 完璧じゃなくても“まず出す”思考</p>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:90%"></div></div>
+        </div>
+        <div class="skill-card reveal-up" style="--delay:0.24s">
+          <div class="skill-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="8" stroke="url(#g4)" stroke-width="2"/><circle cx="20" cy="20" r="18" stroke="url(#g4)" stroke-width="2" stroke-dasharray="4 4"/><defs><linearGradient id="g4" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#fb923c"/><stop offset="1" stop-color="#ea580c"/></linearGradient></defs></svg>
+          </div>
+          <h3>改善力</h3>
+          <p>LP改善・タレント集客・営業文作成まで実施 / 仮説→実行→改善のサイクルを回している</p>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:75%"></div></div>
+        </div>
+        <div class="skill-card reveal-up" style="--delay:0.32s">
+          <div class="skill-icon">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M8 12l12-8 12 8v16l-12 8-12-8z" stroke="url(#g5)" stroke-width="2" stroke-linejoin="round"/><defs><linearGradient id="g5" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#a78bfa"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs></svg>
+          </div>
+          <h3>ユーザー視点・共感力</h3>
+          <p>自分の原体験からサービスを作っている / 感情価値（感動体験）を言語化できる</p>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:95%"></div></div>
+        </div>
+        <div class="skill-card reveal-up" style="--delay:0.4s">
+          <div class="skill-icon">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M20 4c8.84 0 16 7.16 16 16S28.84 36 20 36 4 28.84 4 20 11.16 4 20 4z" stroke="url(#g6)" stroke-width="2"/><path d="M14 20l4 4 8-8" stroke="url(#g6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="g6" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#34d399"/><stop offset="1" stop-color="#0891b2"/></linearGradient></defs></svg>
+          </div>
+          <h3>自走力・オーナーシップ</h3>
+          <p>一人で企画〜開発〜営業まで推進 / 学びながら進めるスタイル</p>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:70%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works Section -->
+  <section class="works" id="works">
+    <div class="container">
+      <p class="section-label reveal-up center">Selected Works</p>
+      <h2 class="section-title reveal-up center">
+        妄想が生んだ、<span class="gradient-text">作品たち。</span>
+      </h2>
+    </div>
+
+    <!-- Work 01 -->
+    <div class="work-item work-item--dark">
+      <div class="work-media reveal-left">
+        <div class="work-mockup mockup--browser">
+          <div class="browser-bar">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="browser-url">ドルスケ - アイドルスケジュール</span>
+          </div>
+          <div class="browser-content" style="--accent:#34d399">
+            <div class="mock-hero"></div>
+            <div class="mock-rows">
+              <div class="mock-row" style="width:70%"></div>
+              <div class="mock-row" style="width:50%"></div>
+              <div class="mock-row" style="width:85%"></div>
+            </div>
+            <div class="mock-cards">
+              <div class="mock-card"></div>
+              <div class="mock-card"></div>
+              <div class="mock-card"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="work-info reveal-right">
+        <span class="work-num">01</span>
+        <h3 class="work-title">ドルスケ</h3>
+        <p class="work-desc">
+          アイドルのライブ情報がSNS上に散在し、ユーザーがスケジュールを把握しづらいという課題に着目し、情報を集約・検索できるWebサービス「ドルスケ」を企画・開発しました。
+          ノーコードツールを用いて短期間でMVPを構築し、ユーザー投稿型のデータ設計を採用することで、マイナーなライブ情報もカバーできる仕組みを実現しています。
+          さらに、投稿者とXアカウントを紐付けることで情報の透明性を担保し、信頼できるコミュニティ基盤の構築を目指しました。
+        </p>
+        <div class="work-tags">
+          <span>ClaudeCode</span><span>Supabase</span><span>Vercel</span>
+        </div>
+        <div class="work-links">
+          <a href="https://dorusuke.vercel.app/" target="_blank" class="btn btn--primary btn--sm">作品を見る →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Work 02 -->
+    <div class="work-item work-item--light work-item--reverse">
+      <div class="work-media reveal-right">
+        <div class="work-mockup mockup--phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen" style="--accent:#a78bfa">
+            <div class="phone-header"></div>
+            <div class="phone-card"></div>
+            <div class="phone-list">
+              <div class="phone-row"></div>
+              <div class="phone-row"></div>
+              <div class="phone-row"></div>
+            </div>
+          </div>
+          <div class="phone-home-bar"></div>
+        </div>
+      </div>
+      <div class="work-info reveal-left">
+        <span class="work-num">02</span>
+        <h3 class="work-title">WowMe</h3>
+        <p class="work-desc">
+          推しとファンをつなぐ動画メッセージアプリです。
+          ファンがタレントに依頼を送り、世界に一つだけの動画メッセージを受け取ることができます。
+          自身が精神的に辛い時期に推しの動画に救われた経験と、友人が推しからの誕生日動画で涙を流して喜んだ体験から、「推しの言葉が人を救う価値」を感じ、このサービスを企画しました。
+          現在はMVPを開発し、タレント集客やLP改善なども含めて一貫して推進しています。
+        </p>
+        <div class="work-tags">
+          <span>HTML</span><span>CSS</span><span>JS</span><span>GitHub</span>
+        </div>
+        <div class="work-links">
+          <a href="https://hello-wowme.github.io/WowMe-Official/" target="_blank" class="btn btn--primary btn--sm">作品を見る →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Work 03 -->
+    <div class="work-item work-item--dark">
+      <div class="work-media reveal-left">
+        <div class="work-mockup mockup--canvas">
+          <div class="canvas-scene">
+            <svg class="canvas-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="canvas-grid-pat" width="24" height="24" patternUnits="userSpaceOnUse">
+                  <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                </pattern>
+                <filter id="ball-glow">
+                  <feGaussianBlur stdDeviation="4" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <rect width="300" height="200" fill="url(#canvas-grid-pat)"/>
+              <!-- Goal -->
+              <circle cx="240" cy="155" r="18" fill="none" stroke="#f472b6" stroke-width="2" stroke-dasharray="5 3" opacity="0.9" class="canvas-goal-ring"/>
+              <circle cx="240" cy="155" r="6" fill="#f472b6" opacity="0.8"/>
+              <!-- Drawn line -->
+              <path d="M 55 45 Q 100 130 180 110 T 240 155" fill="none" stroke="#60a5fa" stroke-width="3" stroke-linecap="round" class="canvas-drawn-line"/>
+              <!-- Ball -->
+              <circle cx="55" cy="45" r="16" fill="#34d399" opacity="0.35" filter="url(#ball-glow)"/>
+              <circle cx="55" cy="45" r="16" fill="#34d399" class="canvas-ball"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="work-info reveal-right">
+        <span class="work-num">03</span>
+        <h3 class="work-title">STOPLINE</h3>
+        <p class="work-desc">
+          制限時間内に線を引いてボールを目的地まで運ぶ、戦略性と直感が試されるシンプルなシングルプレイゲームです。
+        </p>
+        <div class="work-tags">
+          <span>Unity</span><span>C#</span><span>WebGL</span>
+        </div>
+        <div class="work-links">
+          <a href="https://ph19-ryota.github.io/STOPLINE.VGA/" target="_blank" class="btn btn--primary btn--sm">作品を見る →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-logo"><a href="#">PORTFOLIO</a></p>
+        <p class="footer-copy">© 2026 — Yamamoto Ryota.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
