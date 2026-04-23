@@ -1416,6 +1416,10 @@ body:has(button:hover) .cursor-follower { width: 52px; height: 52px; border-colo
   /* Footer */
   .footer-inner { flex-direction: column; text-align: center; }
 
+  /* Scroll indicator */
+  .hero-scroll { display: none; }
+  .hero { padding-bottom: 60px; }
+
   /* Cursor */
   body { cursor: auto; }
   .cursor, .cursor-follower { display: none; }
