@@ -90,52 +90,6 @@ document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right')
   .forEach(el => revealObserver.observe(el));
 
 /* ==========================================
-   COUNTER ANIMATION
-   ========================================== */
-function animateCounter(el) {
-  const target = parseInt(el.dataset.count, 10);
-  const duration = 1800;
-  const start = performance.now();
-
-  function update(now) {
-    const elapsed = now - start;
-    const progress = Math.min(elapsed / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    el.textContent = Math.floor(eased * target);
-    if (progress < 1) requestAnimationFrame(update);
-    else el.textContent = target;
-  }
-
-  requestAnimationFrame(update);
-}
-
-const counterObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      animateCounter(entry.target);
-      counterObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.5 });
-
-document.querySelectorAll('.stat-num[data-count]')
-  .forEach(el => counterObserver.observe(el));
-
-/* ==========================================
-   SKILL BAR ANIMATION
-   ========================================== */
-const skillObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('revealed');
-      skillObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.3 });
-
-document.querySelectorAll('.skill-card').forEach(el => skillObserver.observe(el));
-
-/* ==========================================
    HERO PARALLAX
    ========================================== */
 const heroSection = document.getElementById('hero');
@@ -213,7 +167,16 @@ document.querySelectorAll('.work-mockup').forEach(mockup => {
    ========================================== */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', e => {
-    const target = document.querySelector(anchor.getAttribute('href'));
+    const href = anchor.getAttribute('href');
+
+    // href="#"（ロゴなど）はページ先頭へ。querySelector('#') は例外になるので先に処理する
+    if (href === '#') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    const target = document.querySelector(href);
     if (!target) return;
     e.preventDefault();
     const offset = parseInt(getComputedStyle(document.documentElement)
@@ -222,34 +185,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });
-
-/* ==========================================
-   CONTACT FORM
-   ========================================== */
-const contactForm = document.getElementById('contactForm');
-
-if (contactForm) {
-  contactForm.addEventListener('submit', e => {
-    e.preventDefault();
-
-    const btn = contactForm.querySelector('.btn--primary');
-    const originalHTML = btn.innerHTML;
-
-    btn.innerHTML = '<span class="btn-text">送信中…</span>';
-    btn.disabled = true;
-
-    setTimeout(() => {
-      contactForm.innerHTML = `
-        <div class="form-success" style="display:block">
-          ✓ &nbsp;メッセージを受け取りました！<br>
-          <span style="font-size:14px;font-weight:400;color:rgba(52,211,153,0.7);margin-top:8px;display:block">
-            2営業日以内にご返信いたします。
-          </span>
-        </div>
-      `;
-    }, 1200);
-  });
-}
 
 /* ==========================================
    PAGE LOAD ANIMATION
