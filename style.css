@@ -612,104 +612,113 @@ body:has(button:hover) .cursor-follower { width: 52px; height: 52px; border-colo
 }
 
 /* ==========================================
-   TIMELINE
+   CAREER
    ========================================== */
-.timeline-section {
+.career {
   padding: 140px 0;
-  background: var(--surface);
+  background: var(--bg);
   border-top: 1px solid var(--border);
+}
+
+.career-list {
+  list-style: none;
+  max-width: 880px;
+  margin: 64px auto 0;
+  border-top: 1px solid var(--border);
+}
+
+.career-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 40px;
+  padding: 32px 24px;
   border-bottom: 1px solid var(--border);
-}
-
-.timeline {
-  margin-top: 64px;
   position: relative;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
+  /* .reveal-up の opacity/transform を残したまま背景のホバーを足す */
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out), background 0.3s;
 }
 
-.timeline::before {
+/* ホバーで左端にグラデーションのバーが伸びる */
+.career-item::before {
   content: '';
   position: absolute;
-  left: 16px;
-  top: 8px;
-  bottom: 8px;
-  width: 1px;
-  background: linear-gradient(to bottom, var(--green), var(--blue), transparent);
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--green), var(--blue));
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s var(--ease-out);
 }
 
-.tl-item {
-  display: flex;
-  gap: 32px;
-  margin-bottom: 52px;
-  position: relative;
-}
+.career-item:hover { background: rgba(255,255,255,0.02); }
+.career-item:hover::before { transform: scaleY(1); }
 
-.tl-item:last-child { margin-bottom: 0; }
-
-.tl-dot {
-  width: 33px;
-  height: 33px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(255,255,255,0.15);
-  background: var(--surface);
-  flex-shrink: 0;
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2px;
-}
-
-.tl-dot::after {
-  content: '';
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.3);
-}
-
-.tl-dot--bright { border-color: rgba(167,139,250,0.5); }
-.tl-dot--bright::after { background: #a78bfa; box-shadow: 0 0 10px #a78bfa; }
-
-.tl-dot--green { border-color: rgba(52,211,153,0.5); }
-.tl-dot--green::after { background: var(--green); box-shadow: 0 0 10px var(--green); }
-
-.tl-content { flex: 1; padding-bottom: 8px; }
-
-.tl-year {
-  display: inline-block;
-  font-size: 11px;
+.career-period {
+  font-size: 14px;
   font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--green);
+  font-variant-numeric: tabular-nums;
+  padding-top: 3px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.career-now {
+  padding: 2px 10px;
+  border-radius: 980px;
+  font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  background: rgba(52,211,153,0.15);
+  border: 1px solid rgba(52,211,153,0.35);
   color: var(--green);
-  margin-bottom: 8px;
+  box-shadow: 0 0 12px rgba(52,211,153,0.25);
 }
 
-.tl-content h3 {
+.career-body h3 {
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 10px;
-  letter-spacing: -0.5px;
+  line-height: 1.5;
+  letter-spacing: -0.4px;
+  margin-bottom: 12px;
 }
 
-.tl-content p {
+.career-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.career-points li {
+  position: relative;
+  padding-left: 18px;
   font-size: 15px;
+  line-height: 1.8;
   color: var(--text-muted);
-  line-height: 1.7;
 }
 
-/* マーカーはコンテンツ左端の外側にぶら下げる（本文はh3と揃える） */
-.tl-content .tl-list {
-  list-style: disc outside;
-  padding-left: 0;
-  margin-left: 0;
-  font-size: 16px;
-  line-height: normal;
-  color: var(--text);
+.career-points li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 0.78em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .career { padding: 80px 0; }
+  .career-list { margin-top: 40px; }
+  .career-item { grid-template-columns: 1fr; gap: 10px; padding: 24px 8px; }
+  .career-body h3 { font-size: 16px; }
+  .career-points li { font-size: 14px; }
 }
 
 /* ==========================================
@@ -1302,6 +1311,78 @@ body:has(button:hover) .cursor-follower { width: 52px; height: 52px; border-colo
   92%, 100% { opacity: 0; transform: scale(3); }
 }
 
+/* Map mockup（LAST24） */
+.mockup--map {
+  background: #0e1116;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  padding: 12px;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+
+.map-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* 経路：点線が店舗へ向かって流れる */
+.map-route {
+  stroke-dasharray: 5 5;
+  animation: route-flow 1s linear infinite;
+  filter: drop-shadow(0 0 4px rgba(96,165,250,0.6));
+}
+
+@keyframes route-flow {
+  to { stroke-dashoffset: -10; }
+}
+
+/* 選択中ピン：上下に弾む */
+.map-pin-active {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: pin-bob 1.6s ease-in-out infinite;
+}
+
+@keyframes pin-bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+
+/* ピン根元と現在地の波紋 */
+.map-pulse,
+.map-me-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: map-ripple 1.8s ease-out infinite;
+}
+
+.map-me-ring { animation-delay: -0.9s; }
+
+@keyframes map-ripple {
+  0%   { transform: scale(0.6); opacity: 0.55; }
+  100% { transform: scale(3.2); opacity: 0; }
+}
+
+/* 作品のサブタイトル・キャッチコピー */
+.work-sub {
+  margin: -8px 0 16px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.work-catch {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.3px;
+  margin-bottom: 20px;
+}
+
 /* ==========================================
    NOW（ステートメント）
    ========================================== */
@@ -1421,10 +1502,6 @@ body:has(button:hover) .cursor-follower { width: 52px; height: 52px; border-colo
   .about-visual { display: none; }
   .about-body { font-size: 16px; }
 
-  /* Timeline */
-  .timeline-section { padding: 80px 0; }
-  .tl-item { gap: 20px; }
-
   /* Faculties */
   .skills { padding: 80px 0; }
   .approach { margin-top: 48px; gap: 16px; }
@@ -1479,10 +1556,6 @@ body:has(button:hover) .cursor-follower { width: 52px; height: 52px; border-colo
 
   /* About */
   .about-body { font-size: 15px; }
-
-  /* Timeline */
-  .tl-content h3 { font-size: 16px; }
-  .tl-content p { font-size: 14px; }
 
   /* Works */
   .work-item { padding: 48px 16px; }

@@ -54,7 +54,11 @@
           "プロダクト企画", "サービス設計", "UX設計", "Webアプリ開発",
           "ゲーム開発", "Unity", "C#", "Supabase", "Vercel", "MVP開発"
         ],
-        "knowsLanguage": "ja"
+        "knowsLanguage": "ja",
+        "alumniOf": [
+          { "@type": "HighSchool", "name": "学校法人角川ドワンゴ学園 N高等学校" },
+          { "@type": "EducationalOrganization", "name": "バンタンゲームアカデミー 高等部" }
+        ]
       },
       {
         "@type": "ProfilePage",
@@ -110,6 +114,15 @@
         "author": { "@id": "https://ryota-yamamoto-portfolio-v2.vercel.app/#person" }
       },
       {
+        "@type": "WebApplication",
+        "name": "LAST24",
+        "description": "売れ残りそうな食品と、近所でお得に買いたい人をマップでつなぐフードロス削減Webサービス。",
+        "url": "https://last-24.vercel.app/welcome",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "Web",
+        "creator": { "@id": "https://ryota-yamamoto-portfolio-v2.vercel.app/#person" }
+      },
+      {
         "@type": "VideoGame",
         "name": "STOPLINE",
         "description": "制限時間の中で線を引き、ボールをゴールまで運ぶシンプルなゲーム。Unity / C# / WebGLで開発。",
@@ -136,6 +149,7 @@
       <a href="#" class="nav-logo">PORTFOLIO</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#career">Career</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#works">Works</a></li>
       </ul>
@@ -149,6 +163,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <ul>
       <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#career" class="mobile-link">Career</a></li>
       <li><a href="#skills" class="mobile-link">Skills</a></li>
       <li><a href="#works" class="mobile-link">Works</a></li>
     </ul>
@@ -174,7 +189,7 @@
       </p>
       <div class="hero-cta reveal-up" style="--delay:0.6s">
         <a href="#works" class="btn btn--primary">作品を見る</a>
-        <a href="#about" class="btn btn--ghost">経歴を読む</a>
+        <a href="#career" class="btn btn--ghost">経歴を読む</a>
       </div>
     </div>
     <div class="hero-scroll">
@@ -260,91 +275,97 @@
     </div>
   </section>
 
-  <!-- Timeline Section -->
-  <section class="timeline-section">
+  <!-- Career Section -->
+  <section class="career" id="career">
     <div class="container">
-      <p class="section-label reveal-up center">Timeline</p>
+      <p class="section-label reveal-up center">Career</p>
       <h2 class="section-title reveal-up center">
-        3年間の<span class="gradient-text">軌跡。</span>
+        これまでの<span class="gradient-text">経歴。</span>
       </h2>
-      <div class="timeline">
-        <div class="tl-item reveal-up" style="--delay:0s">
-          <div class="tl-dot"></div>
-          <div class="tl-content">
-            <span class="tl-year">2023/1</span>
-            <h3>発症</h3>
-            <ul class="tl-list">
-              <li>妄想（現実と異なる確信）</li>
-              <li>躁状態（気分の高揚・活動過多）</li>
-              <li>異常行動・発言</li>
+
+      <ol class="career-list">
+        <li class="career-item reveal-up">
+          <div class="career-period">2019 – 2022</div>
+          <div class="career-body">
+            <h3>学校法人角川ドワンゴ学園N高等学校</h3>
+            <ul class="career-points">
+              <li>1年間分の単位を2週間で終わらせ、残りの時間をゲーム開発の時間へとシフト</li>
             </ul>
           </div>
-        </div>
-        <div class="tl-item reveal-up" style="--delay:0.08s">
-          <div class="tl-dot tl-dot--bright"></div>
-          <div class="tl-content">
-            <span class="tl-year">2023/2</span>
-            <h3>初回入院（医療保護入院）</h3>
-            <ul class="tl-list">
-              <li>足立区にある成仁病院に入院</li>
-              <li>薬物療法＋m-ECT（修正型電気けいれん療法）を実施</li>
+        </li>
+
+        <li class="career-item reveal-up">
+          <div class="career-period">2019 – 2022</div>
+          <div class="career-body">
+            <h3>バンタンゲームアカデミー高等部ゲーム制作専攻</h3>
+            <ul class="career-points">
+              <li>2D,3D,VRゲームなど多種多様なゲームをUnityを用いて開発。</li>
+              <li>Unityインターハイや産学連携などにも積極的に参加</li>
+              <li>学内審査会では過去最多の4度の最優秀賞を受賞</li>
             </ul>
           </div>
-        </div>
-        <div class="tl-item reveal-up" style="--delay:0.16s">
-          <div class="tl-dot"></div>
-          <div class="tl-content">
-            <span class="tl-year">2023/3</span>
-            <h3>退院後</h3>
-            <ul class="tl-list">
-              <li>体調の波がある状態が続く</li>
-              <li>アルバイトや就労移行支援に挑戦</li>
-              <li>一方で体調・人間関係の負荷により継続が難しい場面も経験</li>
+        </li>
+
+        <li class="career-item reveal-up">
+          <div class="career-period">2022 – 2023</div>
+          <div class="career-body">
+            <h3>株式会社ディー・エヌ・エー（DeNA）入社</h3>
+            <ul class="career-points">
+              <li>出向社員として株式会社IRIAMに出向</li>
+              <li>周りとの格差に何度も挫折を経験、エンジニアよりビジネスに興味を持ち出し起業するために退職</li>
             </ul>
           </div>
-        </div>
-        <div class="tl-item reveal-up" style="--delay:0.24s">
-          <div class="tl-dot tl-dot--bright"></div>
-          <div class="tl-content">
-            <span class="tl-year">2023/12</span>
-            <h3>再発・再入院</h3>
-            <ul class="tl-list">
-              <li>12月13日：緊急措置入院（豊島病院）</li>
-              <li>12月14日：措置入院（成仁病院）</li>
-              <li>症状：被害妄想、誇大妄想・感情の起伏の激化</li>
+        </li>
+
+        <li class="career-item reveal-up">
+          <div class="career-period">2023</div>
+          <div class="career-body">
+            <ul class="career-points">
+              <li>推し活領域で起業を志すも短時間睡眠が原因で体調を崩す</li>
             </ul>
           </div>
-        </div>
-        <div class="tl-item reveal-up" style="--delay:0.32s">
-          <div class="tl-dot"></div>
-          <div class="tl-content">
-            <span class="tl-year">2024/2</span>
-            <h3>退院</h3>
-            <ul class="tl-list">
-              <li>2か月半の入院を経て症状の安定を確認し退院</li>
+        </li>
+
+        <li class="career-item reveal-up">
+          <div class="career-period">2023 – 2024</div>
+          <div class="career-body">
+            <h3>療養期間</h3>
+            <ul class="career-points">
+              <li>精神疾患を発症し、精神病院への入院を2度経験</li>
             </ul>
           </div>
-        </div>
-        <div class="tl-item reveal-up" style="--delay:0.40s">
-          <div class="tl-dot tl-dot--green"></div>
-          <div class="tl-content">
-            <span class="tl-year">2025/11～2026/7</span>
-            <h3>寛解・安定期</h3>
-            <ul class="tl-list">
-              <li>月1回の外来通院＋注射・薬物療法・訪問看護の利用</li>
-              <li>デイケア（週5回通所）後、現在は週3でクローズのアルバイトをしている</li>
-              <li>症状悪化時は休養＋頓服で自己管理</li>
+        </li>
+
+        <li class="career-item reveal-up">
+          <div class="career-period">2024 – 2025</div>
+          <div class="career-body">
+            <ul class="career-points">
+              <li>短時間睡眠を止めて、社会に腰を据えるためにカラオケ屋での早朝アルバイトをワンオペで多いときは週5働いていた。</li>
             </ul>
           </div>
-        </div>
-      </div>
+        </li>
+
+        <li class="career-item career-item--now reveal-up">
+          <div class="career-period">
+            2025 – 2026
+            <span class="career-now">Now</span>
+          </div>
+          <div class="career-body">
+            <ul class="career-points">
+              <li>当時のプロダクトに大量のタレントが必要なため250名への営業活動をする</li>
+              <li>AIブームに参入し、主にClaudeCodeを使ったWebアプリの開発</li>
+              <li>現在は福祉のDX化やフードロス削減などの社会課題に挑んでいる</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
     </div>
   </section>
 
   <!-- Faculties Section -->
   <section class="skills" id="skills">
     <div class="container">
-      <p class="section-label reveal-up center">Faculties</p>
+      <p class="section-label reveal-up center">Skills</p>
       <h2 class="section-title reveal-up center">
         考えて、作って、<span class="gradient-text">届ける。</span>
       </h2>
@@ -688,6 +709,98 @@
         </div>
         <div class="work-links">
           <a href="https://ncs-beat.vercel.app/" target="_blank" rel="noopener" class="btn btn--primary btn--sm">サービスを見る →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Work 06 -->
+    <div class="work-item work-item--light work-item--reverse">
+      <div class="work-media reveal-right">
+        <div class="work-mockup mockup--map">
+          <svg class="map-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="map-thumb" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#fb923c" />
+                <stop offset="1" stop-color="#f472b6" />
+              </linearGradient>
+              <filter id="map-glow">
+                <feGaussianBlur stdDeviation="2.5" result="b" />
+                <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+              </filter>
+            </defs>
+
+            <!-- 地図の地面・公園 -->
+            <rect width="300" height="200" fill="#0e1116" />
+            <rect x="208" y="68" width="84" height="44" rx="6" fill="rgba(52,211,153,0.08)" />
+
+            <!-- 道路 -->
+            <g stroke="#1b2029" stroke-linecap="round">
+              <line x1="0" y1="60" x2="300" y2="60" stroke-width="8" />
+              <line x1="0" y1="120" x2="300" y2="120" stroke-width="8" />
+              <line x1="90" y1="0" x2="90" y2="200" stroke-width="8" />
+              <line x1="200" y1="0" x2="200" y2="200" stroke-width="8" />
+              <line x1="0" y1="92" x2="200" y2="92" stroke-width="4" />
+              <line x1="145" y1="0" x2="145" y2="120" stroke-width="4" />
+              <line x1="250" y1="0" x2="250" y2="60" stroke-width="4" />
+              <line x1="40" y1="0" x2="40" y2="120" stroke-width="4" />
+            </g>
+
+            <!-- 現在地 → 店舗への経路 -->
+            <path class="map-route" d="M 66 100 L 90 100 L 90 60 L 165 60 L 165 84" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+
+            <!-- 他の店舗ピン -->
+            <g transform="translate(240 44)">
+              <path d="M0 0 C-4 -6 -7 -9 -7 -13 A7 7 0 1 1 7 -13 C7 -9 4 -6 0 0Z" fill="#34d399" opacity="0.85" />
+              <circle cx="0" cy="-13" r="2.6" fill="#0e1116" />
+            </g>
+            <g transform="translate(40 40)">
+              <path d="M0 0 C-4 -6 -7 -9 -7 -13 A7 7 0 1 1 7 -13 C7 -9 4 -6 0 0Z" fill="#a78bfa" opacity="0.85" />
+              <circle cx="0" cy="-13" r="2.6" fill="#0e1116" />
+            </g>
+            <g transform="translate(120 138)">
+              <path d="M0 0 C-4 -6 -7 -9 -7 -13 A7 7 0 1 1 7 -13 C7 -9 4 -6 0 0Z" fill="#f472b6" opacity="0.85" />
+              <circle cx="0" cy="-13" r="2.6" fill="#0e1116" />
+            </g>
+
+            <!-- 選択中の店舗ピン（波紋＋上下に弾む） -->
+            <g transform="translate(165 88)">
+              <circle class="map-pulse" cx="0" cy="0" r="6" fill="#fb923c" />
+              <g class="map-pin-active">
+                <path d="M0 0 C-5 -7 -9 -11 -9 -16 A9 9 0 1 1 9 -16 C9 -11 5 -7 0 0Z" fill="#fb923c" filter="url(#map-glow)" />
+                <circle cx="0" cy="-16" r="3.4" fill="#0e1116" />
+              </g>
+            </g>
+
+            <!-- 現在地 -->
+            <circle class="map-me-ring" cx="66" cy="100" r="5" fill="#60a5fa" />
+            <circle cx="66" cy="100" r="4.5" fill="#60a5fa" stroke="#0e1116" stroke-width="2" />
+
+            <!-- 下部の店舗カード -->
+            <g class="map-sheet">
+              <rect x="18" y="150" width="264" height="40" rx="10" fill="#161a22" stroke="rgba(255,255,255,0.08)" />
+              <rect x="27" y="158" width="24" height="24" rx="6" fill="url(#map-thumb)" />
+              <rect x="60" y="161" width="92" height="6" rx="3" fill="rgba(255,255,255,0.22)" />
+              <rect x="60" y="173" width="60" height="5" rx="2.5" fill="rgba(255,255,255,0.1)" />
+              <rect x="232" y="161" width="40" height="18" rx="9" fill="rgba(251,146,60,0.16)" stroke="rgba(251,146,60,0.5)" />
+              <text x="252" y="173.5" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#fb923c">-50%</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="work-info reveal-left">
+        <span class="work-num">06</span>
+        <h3 class="work-title">LAST24</h3>
+        <p class="work-sub">フードロス削減Webサービス</p>
+        <p class="work-catch">「もったいない」を、「買いたい」に。</p>
+        <div class="work-desc">
+          <p>売れ残りそうな食品と、近所でお得に買いたい人をマップでつなぐWebサービス。購入者には節約を、店舗には新たな販売機会を届けます。</p>
+          <p>「安いから使う」が、フードロス削減につながる。その仕組みを、Claude Codeを活用して企画・開発しました。</p>
+        </div>
+        <div class="work-tags">
+          <span>ClaudeCode</span><span>Supabase</span><span>Vercel</span>
+        </div>
+        <div class="work-links">
+          <a href="https://last-24.vercel.app/welcome" target="_blank" rel="noopener" class="btn btn--primary btn--sm">サービスを利用する →</a>
         </div>
       </div>
     </div>
