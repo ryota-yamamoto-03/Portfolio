@@ -163,6 +163,123 @@ document.querySelectorAll('.work-mockup').forEach(mockup => {
 });
 
 /* ==========================================
+   VIDEO GALLERY（YouTube・最初は無音）
+   ========================================== */
+const videoCards = Array.from(document.querySelectorAll('.video-card'));
+
+if (videoCards.length) {
+  // YouTube IFrame API の読み込み（準備できるまでの処理はキューに貯める）
+  let apiReady = false;
+  const queue = [];
+  const whenApiReady = fn => apiReady ? fn() : queue.push(fn);
+
+  window.onYouTubeIframeAPIReady = () => {
+    apiReady = true;
+    queue.splice(0).forEach(fn => fn());
+  };
+
+  const apiTag = document.createElement('script');
+  apiTag.src = 'https://www.youtube.com/iframe_api';
+  document.head.appendChild(apiTag);
+
+  function applyAudio(card) {
+    const p = card.player;
+    if (!p || typeof p.mute !== 'function') return;
+
+    if (card.wantSound) {
+      p.unMute();
+      p.setVolume(100);
+    } else {
+      p.mute();
+    }
+
+    card.classList.toggle('is-unmuted', !!card.wantSound);
+    const btn = card.querySelector('.video-mute');
+    btn.setAttribute('aria-pressed', String(!card.wantSound));
+    btn.setAttribute('aria-label', card.wantSound ? '音を消す' : '音を出す');
+  }
+
+  function createPlayer(card) {
+    if (card.player || card.building) return;
+    card.building = true;
+
+    whenApiReady(() => {
+      const id = card.dataset.yt;
+      card.player = new YT.Player(card.querySelector('.video-player'), {
+        videoId: id,
+        playerVars: {
+          autoplay: 1,
+          mute: 1,            // 自動再生のため必ず無音で始める
+          loop: 1,
+          playlist: id,       // 1本をループさせるのに必要
+          controls: 0,
+          disablekb: 1,
+          fs: 0,
+          modestbranding: 1,
+          playsinline: 1,
+          rel: 0,
+          iv_load_policy: 3
+        },
+        events: {
+          onReady: e => {
+            e.target.playVideo();
+            applyAudio(card);   // ボタンが先に押されていた場合に備える
+          },
+          onStateChange: e => {
+            // 停止中はYouTubeのタイトル帯やロゴが出るので、サムネイルで覆い隠す
+            if (e.data === YT.PlayerState.PLAYING) {
+              card.autoPaused = false;
+              card.classList.add('is-ready');
+            } else if (e.data === YT.PlayerState.PAUSED && card.autoPaused) {
+              card.classList.remove('is-ready');
+            }
+          }
+        }
+      });
+    });
+  }
+
+  function setSound(card, on) {
+    card.wantSound = on;
+    if (on) createPlayer(card);
+    applyAudio(card);
+    if (!card.player) {
+      // プレイヤー未生成でも見た目は切り替えておく
+      card.classList.toggle('is-unmuted', on);
+    }
+  }
+
+  videoCards.forEach(card => {
+    card.wantSound = false;
+
+    card.querySelector('.video-mute').addEventListener('click', () => {
+      const turnOn = !card.wantSound;
+      // 複数の音が重ならないよう、ほかは必ず無音に戻す
+      videoCards.forEach(other => { if (other !== card) setSound(other, false); });
+      setSound(card, turnOn);
+      if (turnOn && card.player && card.player.playVideo) card.player.playVideo();
+    });
+  });
+
+  // 画面に入ったものだけ再生する（重くならないように）
+  const videoObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const card = entry.target;
+      if (entry.isIntersecting) {
+        createPlayer(card);
+        if (card.player && card.player.playVideo) card.player.playVideo();
+      } else if (card.player && card.player.pauseVideo) {
+        card.autoPaused = true;      // 自動停止だと分かるようにしておく
+        card.player.pauseVideo();
+        if (card.wantSound) setSound(card, false);   // 画面外では音も止める
+      }
+    });
+  }, { threshold: 0.35 });
+
+  videoCards.forEach(card => videoObserver.observe(card));
+}
+
+/* ==========================================
    SMOOTH ANCHOR SCROLL
    ========================================== */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

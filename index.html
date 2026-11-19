@@ -143,6 +143,7 @@
         <li><a href="#career">Career</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#works">Works</a></li>
+        <li><a href="#videos">Video</a></li>
       </ul>
       <button class="nav-hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -157,6 +158,7 @@
       <li><a href="#career" class="mobile-link">Career</a></li>
       <li><a href="#skills" class="mobile-link">Skills</a></li>
       <li><a href="#works" class="mobile-link">Works</a></li>
+      <li><a href="#videos" class="mobile-link">Video</a></li>
     </ul>
   </div>
 
@@ -248,7 +250,7 @@
               <div class="about-badges">
                 <span class="badge badge--green">Now Building</span>
                 <span class="badge badge--dark">企画 → 開発 → 営業</span>
-                <span class="badge badge--dark">福祉 × テクノロジー</span>
+                <span class="badge badge--dark">AI × 動画編集</span>
               </div>
             </div>
           </div>
@@ -732,6 +734,99 @@
         <div class="work-links">
           <a href="https://last-24.vercel.app/welcome" target="_blank" rel="noopener" class="btn btn--primary btn--sm">サービスを利用する →</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="videos" id="videos">
+    <div class="container">
+      <p class="section-label reveal-up center">Video</p>
+      <h2 class="section-title reveal-up center">
+        編集した、<span class="gradient-text">動画たち。</span>
+      </h2>
+      <div class="lead reveal-up">
+        <p>After EffectsやClaude Codeを使って、動画を編集しています。</p>
+        <p>はじめは音が出ません。右下のスピーカーボタンで音を出せます。</p>
+      </div>
+
+      <!-- ==========================================================
+           ▼ 動画の追加・差し替えはこの中だけでできます
+             data-yt   : YouTubeの動画ID（URLの v= のあとの11文字）
+             --ratio   : 9/16 なら縦型、16/9 なら横型
+             thumb の src の「VIDEO_ID」の部分も同じIDに合わせてください
+           いま入っているのはレイアウト確認用のサンプル動画です
+           ========================================================== -->
+      <div class="video-grid">
+
+        <article class="video-card reveal-up" data-yt="fS2qOu8WHTw" style="--ratio:16/9">
+          <div class="video-frame">
+            <div class="video-player"></div>
+            <img class="video-thumb" src="https://i.ytimg.com/vi/fS2qOu8WHTw/maxresdefault.jpg" alt="" loading="lazy">
+            <button class="video-mute" type="button" aria-pressed="true" aria-label="音を出す">
+              <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M11 5 6 9H2v6h4l5 4z" /><line x1="23" y1="9" x2="17" y2="15" /><line x1="17" y1="9" x2="23" y2="15" />
+              </svg>
+              <svg class="icon-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M11 5 6 9H2v6h4l5 4z" /><path d="M15.5 8.5a5 5 0 0 1 0 7" /><path d="M19 5a9 9 0 0 1 0 14" />
+              </svg>
+            </button>
+          </div>
+          <h3 class="video-title">第六感</h3>
+          <p class="video-meta">After Effects</p>
+        </article>
+
+        <article class="video-card reveal-up" data-yt="bO2Ovmflnw4" style="--ratio:16/9">
+          <div class="video-frame">
+            <div class="video-player"></div>
+            <img class="video-thumb" src="https://i.ytimg.com/vi/bO2Ovmflnw4/maxresdefault.jpg" alt="" loading="lazy">
+            <button class="video-mute" type="button" aria-pressed="true" aria-label="音を出す">
+              <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M11 5 6 9H2v6h4l5 4z" /><line x1="23" y1="9" x2="17" y2="15" /><line x1="17" y1="9" x2="23" y2="15" />
+              </svg>
+              <svg class="icon-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M11 5 6 9H2v6h4l5 4z" /><path d="M15.5 8.5a5 5 0 0 1 0 7" /><path d="M19 5a9 9 0 0 1 0 14" />
+              </svg>
+            </button>
+          </div>
+          <h3 class="video-title">ClaudeCode × YouTube</h3>
+          <p class="video-meta">Claude Code</p>
+        </article>
+
+        <article class="video-card reveal-up" data-yt="fyWLjdJKwLk" style="--ratio:16/9">
+          <div class="video-frame">
+            <div class="video-player"></div>
+            <img class="video-thumb" src="https://i.ytimg.com/vi/fyWLjdJKwLk/maxresdefault.jpg" alt="" loading="lazy">
+            <button class="video-mute" type="button" aria-pressed="true" aria-label="音を出す">
+              <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M11 5 6 9H2v6h4l5 4z" /><line x1="23" y1="9" x2="17" y2="15" /><line x1="17" y1="9" x2="23" y2="15" />
+              </svg>
+              <svg class="icon-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M11 5 6 9H2v6h4l5 4z" /><path d="M15.5 8.5a5 5 0 0 1 0 7" /><path d="M19 5a9 9 0 0 1 0 14" />
+              </svg>
+            </button>
+          </div>
+          <h3 class="video-title">ClaudeCode × オドレテル歌詞動画</h3>
+          <p class="video-meta">Claude Code</p>
+        </article>
+
+        <article class="video-card reveal-up" data-yt="zJYTO1JnabM" style="--ratio:16/9">
+          <div class="video-frame">
+            <div class="video-player"></div>
+            <img class="video-thumb" src="https://i.ytimg.com/vi/zJYTO1JnabM/maxresdefault.jpg" alt="" loading="lazy">
+            <button class="video-mute" type="button" aria-pressed="true" aria-label="音を出す">
+              <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M11 5 6 9H2v6h4l5 4z" /><line x1="23" y1="9" x2="17" y2="15" /><line x1="17" y1="9" x2="23" y2="15" />
+              </svg>
+              <svg class="icon-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M11 5 6 9H2v6h4l5 4z" /><path d="M15.5 8.5a5 5 0 0 1 0 7" /><path d="M19 5a9 9 0 0 1 0 14" />
+              </svg>
+            </button>
+          </div>
+          <h3 class="video-title">ClaudeCode × 織田信長</h3>
+          <p class="video-meta">Claude Code</p>
+        </article>
+
       </div>
     </div>
   </section>
